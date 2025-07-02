@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Colegio Prisma</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header y Navegación -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-svg">
+                    <svg width="50" height="50" viewBox="0 0 24 24">
+                        <polygon points="23 7 16 12 23 17 23 7" fill="#1e3a8a"/>
+                        <rect x="1" y="5" width="15" height="14" rx="2" fill="#f97316"/>
+                    </svg>
+                </div>
+                <div class="logo-text">Colegio <span>Prisma</span></div>
+            </div>
+            
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="about.html">Nosotros</a></li>
+                    <li><a href="academic.html">Académico</a></li>
+                    <li><a href="admissions.html">Admisiones</a></li>
+                    <li><a href="contact.html" class="active">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section para Contacto -->
+    <section class="hero hero-contact">
+        <div class="hero-content">
+            <h1>Contáctanos</h1>
+            <p>Estamos aquí para responder tus preguntas y brindarte la información que necesitas</p>
+        </div>
+    </section>
+
+    <!-- Sección Información de Contacto -->
+    <section class="contact">
+        <div class="container">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>Información de Contacto</h2>
+                    <p>Puedes comunicarte con nosotros a través de los siguientes medios:</p>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Dirección</h3>
+                            <p>Av. Educación 1234, Distrito Educativo<br>Ciudad Prisma, CP 12345</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Teléfono</h3>
+                            <p>(123) 456-7890<br>(123) 456-7891 (Admisiones)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Email</h3>
+                            <p>info@colegioprisma.edu<br>admisiones@colegioprisma.edu</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-text">
+                            <h3>Horario de Atención</h3>
+                            <p>Lunes a Viernes: 7:30 am - 5:00 pm<br>Sábados: 9:00 am - 12:00 pm</p>
+                        </div>
+                    </div>
+                    
+                    <div class="map-container">
+                        <div class="map-placeholder">
+                            <i class="fas fa-map-marked-alt map-icon"></i>
+                            <p class="map-label">Mapa de Ubicación</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h2>Envíanos un mensaje</h2>
+                    <p>Completa el siguiente formulario y nos pondremos en contacto contigo a la brevedad.</p>
+                    
+                    <form id="mainContactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contact-name">Nombre completo</label>
+                                <input type="text" id="contact-name" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-email">Correo electrónico</label>
+                                <input type="email" id="contact-email" class="form-control" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contact-phone">Teléfono</label>
+                            <input type="tel" id="contact-phone" class="form-control">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contact-subject">Asunto</label>
+                            <select id="contact-subject" class="form-control" required>
+                                <option value="">Seleccione un asunto</option>
+                                <option value="admissions">Admisiones</option>
+                                <option value="info">Información General</option>
+                                <option value="academic">Consulta Académica</option>
+                                <option value="event">Eventos</option>
+                                <option value="other">Otro</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contact-message">Mensaje</label>
+                            <textarea id="contact-message" class="form-control" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Preguntas Frecuentes -->
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">Preguntas Frecuentes</h2>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <h3><i class="fas fa-question-circle faq-icon"></i> ¿Cuál es el horario de clases?</h3>
+                    <p>El horario regular es de 7:30 am a 2:30 pm para todos los niveles. Contamos con programas extracurriculares hasta las 5:00 pm.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3><i class="fas fa-question-circle faq-icon"></i> ¿Ofrecen transporte escolar?</h3>
+                    <p>Sí, contamos con rutas de transporte escolar que cubren las principales zonas de la ciudad. El costo varía según la distancia.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3><i class="fas fa-question-circle faq-icon;"></i> ¿Tienen programa de becas?</h3>
+                    <p>Sí, ofrecemos becas académicas, deportivas y por necesidad económica. Puedes solicitar información en el departamento de admisiones.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3><i class="fas fa-question-circle faq-icon;"></i> ¿Cuál es la política de uniformes?</h3>
+                    <p>Todos los estudiantes deben usar el uniforme oficial del colegio. Contamos con dos uniformes: diario y deportivo.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3><i class="fas fa-question-circle faq-icon"></i> ¿Cómo manejan la seguridad en el colegio?</h3>
+                    <p>Contamos con personal de seguridad, cámaras de vigilancia, protocolos de emergencia y un sistema de control de acceso.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3><i class="fas fa-question-circle faq-icon"></i> ¿Ofrecen alimentos en el colegio?</h3>
+                    <p>Sí, tenemos un servicio de cafetería con opciones saludables y un menú supervisado por nutricionistas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- WhatsApp flotante -->
+    <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <!-- Footer -->
+    <footer>
+        <!-- El mismo footer que en index.html -->
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
