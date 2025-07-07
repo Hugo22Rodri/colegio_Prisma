@@ -348,14 +348,14 @@ nav ul li a.active:after {
   color: white;
 }
 
-.carrusel-contenedor {
+.carousel-container {
   max-width: 800px;
   margin: auto;
   overflow: hidden;
   position: relative;
 }
 
-.carrusel {
+.carousel-track {
   display: flex;
   transition: transform 0.5s ease-in-out;
   height: 400px;
