@@ -1,4 +1,4 @@
-// Navegación móvil
+// 🌐 Navegación móvil
 const menuToggle = document.getElementById('menuToggle');
 const mainNav = document.getElementById('mainNav');
 
@@ -8,7 +8,7 @@ if (menuToggle && mainNav) {
     });
 }
 
-// Cambio de header al hacer scroll
+// 🧭 Cambio de estilo en header al hacer scroll
 window.addEventListener('scroll', () => {
     const header = document.querySelector('header');
     if (header) {
@@ -20,7 +20,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Carrusel de testimonios (Solo se ejecuta si existen los elementos)
+// 💬 Carrusel de testimonios (opcional, si aún lo usas)
 const slides = document.querySelector('.testimonial-slides');
 const dots = document.querySelectorAll('.slider-dot');
 let currentSlide = 0;
@@ -39,28 +39,46 @@ if (slides && dots.length > 0) {
         });
     });
 
-    // Cambio automático de slides
     setInterval(() => {
         currentSlide = (currentSlide + 1) % dots.length;
         showSlide(currentSlide);
     }, 5000);
 }
 
+// 🖼️ Carrusel de imágenes (nuevo)
+const imageTrack = document.querySelector('.carousel-track');
+const imageDots = document.querySelectorAll('.slider-dot');
+let currentImage = 0;
 
-// Manejo del formulario de contacto (Si existe un formulario con el ID 'contactForm')
+if (imageTrack && imageDots.length > 0) {
+    function showImageSlide(n) {
+        imageTrack.style.transform = `translateX(-${n * 100}%)`;
+        imageDots.forEach(dot => dot.classList.remove('active'));
+        imageDots[n].classList.add('active');
+        currentImage = n;
+    }
+
+    imageDots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            showImageSlide(index);
+        });
+    });
+
+    setInterval(() => {
+        currentImage = (currentImage + 1) % imageDots.length;
+        showImageSlide(currentImage);
+    }, 5000);
+}
+
+// 📨 Manejo del formulario de contacto
 const contactForm = document.getElementById('contactForm');
 
 if (contactForm) {
-    contactForm.addEventListener('submit', function(event) {
-        event.preventDefault(); // Evita el envío predeterminado del formulario
+    contactForm.addEventListener('submit', function (event) {
+        event.preventDefault();
 
-        // Aquí podrías agregar lógica para enviar los datos del formulario,
-        // por ejemplo, usando fetch() para enviar a un backend.
-        // Por ahora, solo mostraremos un mensaje de éxito.
-
+        // Aquí podrías enviar los datos del formulario con fetch()
         alert('¡Solicitud enviada con éxito! Nos pondremos en contacto contigo pronto.');
-
-        // Opcional: Resetear el formulario después del envío
         contactForm.reset();
     });
 }
