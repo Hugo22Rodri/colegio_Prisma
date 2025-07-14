@@ -1,4 +1,4 @@
-// 🌐 Navegación móvil
+// Navegación móvil
 const menuToggle = document.getElementById('menuToggle');
 const mainNav = document.getElementById('mainNav');
 
@@ -8,7 +8,7 @@ if (menuToggle && mainNav) {
     });
 }
 
-// 🧭 Cambio de estilo en header al hacer scroll
+//  Cambio de estilo en header al hacer scroll
 window.addEventListener('scroll', () => {
     const header = document.querySelector('header');
     if (header) {
@@ -20,32 +20,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// 💬 Carrusel de testimonios (opcional, si aún lo usas)
-const slides = document.querySelector('.testimonial-slides');
-const dots = document.querySelectorAll('.slider-dot');
-let currentSlide = 0;
-
-if (slides && dots.length > 0) {
-    function showSlide(n) {
-        slides.style.transform = `translateX(-${n * 100}%)`;
-        dots.forEach(dot => dot.classList.remove('active'));
-        dots[n].classList.add('active');
-        currentSlide = n;
-    }
-
-    dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => {
-            showSlide(index);
-        });
-    });
-
-    setInterval(() => {
-        currentSlide = (currentSlide + 1) % dots.length;
-        showSlide(currentSlide);
-    }, 5000);
-}
-
-// 🖼️ Carrusel de imágenes (nuevo)
+//  Carrusel
 const imageTrack = document.querySelector('.carousel-track');
 const imageDots = document.querySelectorAll('.slider-dot');
 let currentImage = 0;
@@ -70,7 +45,7 @@ if (imageTrack && imageDots.length > 0) {
     }, 5000);
 }
 
-// 📨 Manejo del formulario de contacto
+// Manejo del formulario de contacto
 const contactForm = document.getElementById('contactForm');
 
 if (contactForm) {
